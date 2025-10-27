@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 240 10% 7%;
+    --foreground: 240 5% 96%;
+
+    --card: 240 8% 12%;
+    --card-foreground: 240 5% 96%;
+
+    --popover: 240 8% 12%;
+    --popover-foreground: 240 5% 96%;
+
+    --primary: 240 5% 96%;
+    --primary-foreground: 240 10% 7%;
+
+    --secondary: 240 6% 20%;
+    --secondary-foreground: 240 5% 96%;
+
+    --muted: 240 6% 25%;
+    --muted-foreground: 240 5% 64%;
+
+    --accent: 240 6% 20%;
+    --accent-foreground: 240 5% 96%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 240 5% 96%;
+
+    --border: 240 6% 20%;
+    --input: 240 6% 20%;
+    --ring: 240 5% 64%;
+
+    --radius: 1rem;
+
+    --widget-bg: 240 8% 15%;
+    --tab-active: 240 7% 23%;
+    --tab-inactive: 240 8% 15%;
+    --text-primary: 240 5% 96%;
+    --text-secondary: 240 5% 64%;
+    --icon-bg: 240 6% 25%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted));
+    border-radius: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+}
